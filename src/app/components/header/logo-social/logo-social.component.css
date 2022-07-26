@@ -1,0 +1,25 @@
+div{
+    background-color: black;
+}
+
+img{
+    height: 40px;
+}
+
+#logo{
+    height: 70px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.social{
+    margin-top: 13px;
+    }
+
+.social img{
+    padding: 2px;
+}
