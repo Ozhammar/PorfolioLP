@@ -1,25 +1,24 @@
-div{
-    background-color: black;
+div {
+  background-color: black;
 }
 
-img{
-    height: 40px;
+img {
+  height: 40px;
 }
 
-#logo{
-    height: 70px;
+#logo {
+  height: 70px;
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    }
+.container {
+  display: flex;
+  justify-content: space-between;
+}
 
-.social{
-    margin-top: 13px;
-    }
+.social {
+  margin-top: 13px;
+}
 
-.social img{
-    padding: 2px;
+.social img {
+  padding: 2px;
 }

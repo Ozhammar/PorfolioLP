@@ -1,0 +1,10 @@
+.row{
+background-color: black;
+display: flex;
+
+}
+
+.descripcion{
+    margin-top: 5%;
+
+}
