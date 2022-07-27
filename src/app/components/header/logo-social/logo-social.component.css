@@ -7,9 +7,9 @@ img {
   height: 70px;
 }
 
-.container {
+.row {
     justify-content: space-between;
-    display: flex;
+    
 }
 
 .social {
