@@ -11,5 +11,6 @@ display: flex;
 
 .descripcion p {
     color: white;
+    text-align: justify;
     
 }

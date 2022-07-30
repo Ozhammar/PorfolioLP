@@ -1,3 +1,9 @@
 #PFA{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    border-color: black;
+}
+
+#experiencia{
+    color: white;
+    text-align: justify;
 }
