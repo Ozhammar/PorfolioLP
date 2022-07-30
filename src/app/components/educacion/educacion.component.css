@@ -1,7 +1,12 @@
-a{
+a,ul,li,h3{
     color: white;
+    text-align:justify;
 }
 
 img{
     height: 100px;
+}
+
+.row{
+    padding-bottom: 30px;
 }
