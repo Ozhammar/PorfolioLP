@@ -1,8 +1,4 @@
-.row{
 
-display: flex;
-
-}
 
 .descripcion{
     margin-top: 5%;
@@ -13,4 +9,10 @@ display: flex;
     color: white;
     text-align: justify;
     
+}
+
+.img-thumbnail{
+    box-shadow: 5px 5px 15px red;
+    background-color: black;
+    border-color: black;
 }
