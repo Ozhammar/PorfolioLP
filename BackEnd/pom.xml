@@ -8,13 +8,13 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.porfolio</groupId>
-	<artifactId>dbporfolio</artifactId>
+	<groupId>com.porfoliodb</groupId>
+	<artifactId>pdb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dbporfolio</name>
+	<name>pdb</name>
 	<description>Base de Datos del Porfolio</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,6 +24,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>

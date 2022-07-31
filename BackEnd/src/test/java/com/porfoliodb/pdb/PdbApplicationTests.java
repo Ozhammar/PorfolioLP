@@ -1,10 +1,10 @@
-package com.porfolio.dbporfolio;
+package com.porfoliodb.pdb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DbporfolioApplicationTests {
+class PdbApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.porfolio.dbporfolio;
+package com.porfoliodb.pdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DbporfolioApplication {
+public class PdbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DbporfolioApplication.class, args);
+		SpringApplication.run(PdbApplication.class, args);
 	}
 
 }
