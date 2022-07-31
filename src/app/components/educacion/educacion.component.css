@@ -3,10 +3,11 @@ a,ul,li,h3{
     text-align:justify;
 }
 
-img{
+.iupfa, .eccleston, .lenguas{
     height: 100px;
 }
 
 .row{
     padding-bottom: 30px;
 }
+
