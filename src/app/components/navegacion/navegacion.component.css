@@ -1,20 +1,4 @@
-
-img {
-    height: 40px;
-  }
-  
-  #logo {
-    height: 70px;
-  }
-  
-  .social {
-    margin-top: 13px;
-    justify-content: flex-end;
-     
-  }
-  
-  .social img {
-    padding: 2px;
-  }
-  
+a{
+  color: white;
+}
   
