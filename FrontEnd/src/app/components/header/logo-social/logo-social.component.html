@@ -24,7 +24,8 @@
       <a href="https://www.facebook.com/Luqaz" target="_blank"
         ><img src="../../../assets/facebook.png" alt="Facebook"
       /></a>
-      <button type="button" class="btn btn-outline-light" (click)="login()">Login</button>
+      <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Login</button>
+      <button type="button" class="btn btn-outline-light" (click)="onLogut()" *ngIf="isLogged">Cerrar Sesion</button>
     </div>
   </div>
 </div>
