@@ -12,11 +12,11 @@ import { TokenService } from 'src/app/service/token.service';
 export class LoginComponent implements OnInit {
   isLogged = false;
   isLogginFail = false;
-  loginUsuario: LoginUsuario;
-  nombreUsuario: string;
-  password: string;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password!: string;
   roles: string[] = [];
-  errorMsj: string;
+  errMsj!: string;
 
   constructor(
     private tokenService: TokenService,
@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
         this.isLogged = false;
         this.isLogginFail = true;
         this.errMsj = err.error.mensaje;
+        console.log(this.errMsj);
       }
     );
   }
