@@ -45,29 +45,33 @@ public class CExperiencia {
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia creada con exito"), HttpStatus.OK);
     }
-    
+
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
-        if(!sExperiencia.existsById(id))
+    public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp) {
+        if (!sExperiencia.existsById(id)) {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        if(sExperiencia.existsByNombreExp(dtoexp.getNombreExp()) && sExperiencia.getByNombreExp(dtoexp.getNombreExp()).get().getId() != id)
-                return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
-        if(StringUtils.isBlank(dtoexp.getNombreExp()))
+        }
+        if (sExperiencia.existsByNombreExp(dtoexp.getNombreExp()) && sExperiencia.getByNombreExp(dtoexp.getNombreExp()).get().getId() != id) {
+            return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtoexp.getNombreExp())) {
             return new ResponseEntity(new Mensaje("Nombre Obligatorio"), HttpStatus.BAD_REQUEST);
-        
+        }
+
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreExp(dtoexp.getNombreExp());
         experiencia.setDescripcionExp(dtoexp.getDescripcionExp());
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada con exito"), HttpStatus.OK);
     }
-    
+
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") int id){
-        if(!sExperiencia.existsById(id))
+    public ResponseEntity<?> delete(@PathVariable("id") int id) {
+        if (!sExperiencia.existsById(id)) {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
+        }
         sExperiencia.delete(id);
         return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
     }
-    
+
 }
