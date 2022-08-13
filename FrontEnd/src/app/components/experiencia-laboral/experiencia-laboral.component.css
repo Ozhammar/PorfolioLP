@@ -3,7 +3,7 @@
     border-color: black;
 }
 
-#experiencia{
+#experiencia, td{
     color: white;
     text-align: justify;
 }

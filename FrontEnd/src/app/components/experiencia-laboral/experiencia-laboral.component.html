@@ -1,6 +1,6 @@
 <div class="container" id="Experiencia">
-    <h1 class="text-center">Experiencia Laboral</h1>
-    <div class="row align-items-center">
+  <h1 class="text-center">Experiencia Laboral</h1>
+  <!--<div class="row align-items-center">
       <div class="col-12 col-sm-3 col-md-4 col-lg-2 col-xl-2 text-center">
         <img class="img-fluid" id="PFA"
         src="../../../assets/logoPFA.png"
@@ -16,5 +16,25 @@
         <li>Funcion actual: desarrollo mi actividad diaria en la Superintendencia de Administracion, area contable de este organismo, como encargado de la correcta erogación y buen uso de los servicios publicos utilizados por el personal que cumple sus funciones en el interior del país.</li>
       </ul>
       </div>
+    </div>-->
+  <div class="row align-items-center" id="experiencia">
+    <div>
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/nuevaexp"
+        *ngIf="isLogged"
+      >
+        NUEVA EXPERIENCIA
+      </button>
     </div>
+    <table class="table">
+      <tr *ngFor="let Experiencia of expe">
+        <td>{{ Experiencia.nombreExp }}</td>
+        <td>{{ Experiencia.descripcionExp }}</td>
+        <td><i class="bi bi-pencil-fill"></i>EDITAR</td>
+        <td>BORRAR</td>
+      </tr>
+    </table>
   </div>
+</div>
