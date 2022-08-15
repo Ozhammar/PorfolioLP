@@ -1,22 +1,36 @@
 <div class="container" id="Experiencia">
   <h1 class="text-center">Experiencia Laboral</h1>
+
   <!--<div class="row align-items-center">
-      <div class="col-12 col-sm-3 col-md-4 col-lg-2 col-xl-2 text-center">
-        <img class="img-fluid" id="PFA"
+    <div class="col-12 col-sm-3 col-md-4 col-lg-2 col-xl-2 text-center">
+      <img
+        class="img-fluid"
+        id="PFA"
         src="../../../assets/logoPFA.png"
         alt="Escudo Policia Federal Argentina"
       />
-      </div>
-      <div class="col-12 col-sm-9 col-md-8 col-lg-10 col-xl-10" id="experiencia">
+    </div>
+    <div class="col-12 col-sm-9 col-md-8 col-lg-10 col-xl-10" id="experiencia">
       <ul>
         <h3>Policia Federal Argentina</h3>
         <li>Fecha de ingreso: 13 de Mayo del 2013.</li>
         <li>Cargo: Auxiliar Tecnico.</li>
-        <li>Experiencia: dentro de las funciones como personal de una fuerza de seguridad desarrolle tareas de control poblacional, como asi tambien cotejo de informacion de ciudadanos con antecedentes penales entre las bases de datos de esta Institucion y el RENAPER.</li>
-        <li>Funcion actual: desarrollo mi actividad diaria en la Superintendencia de Administracion, area contable de este organismo, como encargado de la correcta erogación y buen uso de los servicios publicos utilizados por el personal que cumple sus funciones en el interior del país.</li>
+        <li>
+          Experiencia: dentro de las funciones como personal de una fuerza de
+          seguridad desarrolle tareas de control poblacional, como asi tambien
+          cotejo de informacion de ciudadanos con antecedentes penales entre las
+          bases de datos de esta Institucion y el RENAPER.
+        </li>
+        <li>
+          Funcion actual: desarrollo mi actividad diaria en la Superintendencia
+          de Administracion, area contable de este organismo, como encargado de
+          la correcta erogación y buen uso de los servicios publicos utilizados
+          por el personal que cumple sus funciones en el interior del país.
+        </li>
       </ul>
-      </div>
-    </div>-->
+    </div>
+  </div>-->
+
   <div class="row align-items-center" id="experiencia">
     <div>
       <button
@@ -32,8 +46,19 @@
       <tr *ngFor="let Experiencia of expe">
         <td>{{ Experiencia.nombreExp }}</td>
         <td>{{ Experiencia.descripcionExp }}</td>
-        <td><i class="bi bi-pencil-fill"></i>EDITAR</td>
-        <td>BORRAR</td>
+        <td *ngIf="isLogged">
+          <button
+            class="btn btn-dark"
+            routerLink="/editexp/{{ Experiencia.id }}"
+          >
+            <i class="bi bi-pencil-fill"></i> EDITAR
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+            <i class="bi bi-trash-fill"></i> BORRAR
+          </button>
+        </td>
       </tr>
     </table>
   </div>

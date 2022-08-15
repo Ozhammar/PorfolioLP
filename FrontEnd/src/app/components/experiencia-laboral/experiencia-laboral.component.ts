@@ -11,7 +11,10 @@ import { TokenService } from 'src/app/service/token.service';
 export class ExperienciaLaboralComponent implements OnInit {
   expe: Experiencia[] = [];
 
-  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) {}
+  constructor(
+    private sExperiencia: SExperienciaService,
+    private tokenService: TokenService
+  ) {}
 
   isLogged = false;
 
@@ -25,9 +28,21 @@ export class ExperienciaLaboralComponent implements OnInit {
   }
 
   cargarExperiencia(): void {
-    this.sExperiencia.lista().subscribe(data => {
-      this.expe = data;})
+    this.sExperiencia.lista().subscribe((data) => {
+      this.expe = data;
+    });
   }
 
-
+  delete(id?: number): void {
+    if (id != undefined) {
+      this.sExperiencia.delete(id).subscribe(
+        (data) => {
+          this.cargarExperiencia();
+        },
+        (err) => {
+          alert('No se pudoborrar la experiencia');
+        }
+      );
+    }
+  }
 }

@@ -19,10 +19,8 @@ export class EditExpeComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
-      (data) => {
-        this.expLab = data;
-      },
-      (err) => {
+      data => { this.expLab = data;},
+     err => {
         alert('Error en la modificacion');
         this.router.navigate(['']);
       }
@@ -32,10 +30,8 @@ export class EditExpeComponent implements OnInit {
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
-      (data) => {
-        this.router.navigate(['']);
-      },
-      (err) => {
+      data => {this.router.navigate(['']);},
+      err => {
         alert('Error en la modificacion');
         this.router.navigate(['']);
       }
