@@ -2,6 +2,7 @@ package com.porfoliodb.pdb.Interface;
 
 import com.porfoliodb.pdb.Entity.Persona;
 import java.util.List;
+import java.util.Optional;
 
 
 
@@ -17,4 +18,7 @@ public interface IPersonaService {
     
     //buscar una persona por ID
     public Persona findPersona(Long Id);
+    
+      
+  
 }

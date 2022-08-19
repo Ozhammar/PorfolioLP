@@ -37,4 +37,8 @@ export class EditExpeComponent implements OnInit {
       }
     );
   }
+
+  stepBack(): void {
+    this.router.navigate(['']);
+  }
 }

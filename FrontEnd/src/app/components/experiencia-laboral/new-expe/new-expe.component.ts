@@ -10,7 +10,11 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 })
 export class NewExpeComponent implements OnInit {
   nombreExp: string = '';
+  inicioExp: string = '';
+  finExp: string = '';
+  cargoExp: string = '';
   descripcionExp: string = '';
+  imgExp: string = '';
 
   constructor(
     private sExperiencia: SExperienciaService,
@@ -20,11 +24,15 @@ export class NewExpeComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreExp, this.descripcionExp);
+    const expe = new Experiencia(this.nombreExp, this.inicioExp, this.finExp, this.cargoExp, this.descripcionExp, this.imgExp);
     this.sExperiencia.save(expe).subscribe( data => {alert('Experiencia crada con exito.'), this.router.navigate(['']);
       }, err => { alert('Falló');
         this.router.navigate(['']);
       }
     )
+  }
+
+  stepBack(): void {
+    this.router.navigate(['']);
   }
 }

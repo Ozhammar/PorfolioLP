@@ -7,10 +7,13 @@ import com.porfoliodb.pdb.Repository.IPersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class ImpPersonaService implements IPersonaService{
     @Autowired IPersonaRepository ipersonaRepository;
+    
     
     @Override
     public List<Persona> getPersona() {
@@ -27,7 +30,7 @@ public class ImpPersonaService implements IPersonaService{
     public void deletePersona(Long id) {
         ipersonaRepository.deleteById(id);
     }
-
+    
     @Override
     public Persona findPersona(Long Id) {
         Persona persona = ipersonaRepository.findById(Id).orElse(null);

@@ -8,7 +8,6 @@ import { BannerComponent } from './components/header/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaLaboralComponent } from './components/experiencia-laboral/experiencia-laboral.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { NavegacionComponent } from './components/navegacion/navegacion.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -20,6 +19,7 @@ import { interceptorProvider } from './service/interceptor-service';
 import { NewExpeComponent } from './components/experiencia-laboral/new-expe/new-expe.component';
 import { EditExpeComponent } from './components/experiencia-laboral/edit-expe/edit-expe.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +29,14 @@ import { EditExpeComponent } from './components/experiencia-laboral/edit-expe/ed
     AcercaDeComponent,
     ExperienciaLaboralComponent,
     EducacionComponent,
-    NavegacionComponent,
     ProyectosComponent,
     SkillsComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
     NewExpeComponent,
-    EditExpeComponent    
+    EditExpeComponent
+    
   ],
 
   imports: [
