@@ -1,6 +1,60 @@
 <div class="container" id="Educación">
   <h1 class="text-center">Formacion Academica</h1>
 
+  <div>
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/nuevaedu"
+      *ngIf="isLogged"
+    >
+      NUEVA EXPERIENCIA EDUCATIVA
+    </button>
+  </div>
+
+
+  <div class="row align-items-center" *ngFor="let Educacion of edu">
+    <div class="col-12 col-sm-3 col-md-4 col-lg-2 col-xl-2 text-center">
+      <!--http://colegioeccleston.org.ar/-->
+      <a href="{{Educacion.urlEdu}}" target="_blank"
+        ><img
+          class="img-fluid"
+          src="{{Educacion.imgEdu}}"
+          alt="{{Educacion.nombreEdu}}"
+      /></a>
+    </div>
+
+    <div class="col-12 col-sm-9 col-md-8 col-lg-10 col-xl-10">
+      <ul>
+        <a href="{{Educacion.urlEdu}}" target="_blank"
+          ><h3>{{Educacion.nombreEdu}}</h3></a
+        >
+        <li>
+          {{Educacion.descripcionEdu}}.
+        </li>
+        <ul>
+          <li>Fecha de inicio: {{Educacion.inicioEdu}}.</li>
+          <li>Fecha de finalización: {{Educacion.finEdu}}.</li>
+          <li>
+            Titulo Obtenido: {{Educacion.tituloEdu}}.
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+<!--
+
+
+
+
+
+
   <div class="row align-items-center">
     <div class="col-12 col-sm-3 col-md-4 col-lg-2 col-xl-2 text-center">
       <a href="http://colegioeccleston.org.ar/" target="_blank"
@@ -141,4 +195,4 @@
       </ul>
     </div>
   </div>
-</div>
+</div>-->

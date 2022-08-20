@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("edu")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
     
     @Autowired
@@ -44,7 +44,7 @@ public class CEducacion {
         if(sEducacion.existsByNombreEdu(dtoedu.getNombreEdu())){
             return new ResponseEntity(new Mensaje("El estudio ya existe"), HttpStatus.BAD_REQUEST);
         }
-        Educacion educacion = new Educacion(dtoedu.getNombreEdu(),dtoedu.getDescripcionEdu(),dtoedu.getInicioEdu(),dtoedu.getFinEdu(),dtoedu.getTituloEdu(),dtoedu.getImgEdu());
+        Educacion educacion = new Educacion(dtoedu.getNombreEdu(),dtoedu.getUrlEdu(),dtoedu.getDescripcionEdu(),dtoedu.getInicioEdu(),dtoedu.getFinEdu(),dtoedu.getTituloEdu(),dtoedu.getImgEdu());
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Experiencia de estudio creada con exito"), HttpStatus.OK);
     }
@@ -65,6 +65,7 @@ public class CEducacion {
 
         Educacion educacion = sEducacion.getOne(id).get();
         educacion.setNombreEdu(dtoedu.getNombreEdu());
+        educacion.setUrlEdu(dtoedu.getUrlEdu());
         educacion.setDescripcionEdu(dtoedu.getDescripcionEdu());
         educacion.setInicioEdu(dtoedu.getInicioEdu());
         educacion.setFinEdu(dtoedu.getFinEdu());

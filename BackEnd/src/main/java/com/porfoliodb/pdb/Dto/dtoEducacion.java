@@ -6,6 +6,7 @@ public class dtoEducacion {
 
     @NotBlank
     private String nombreEdu;
+    private String urlEdu;
     @NotBlank
     private String descripcionEdu;
     @NotBlank
@@ -18,8 +19,9 @@ public class dtoEducacion {
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreEdu, String descripcionEdu, String inicioEdu, String finEdu, String tituloEdu, String imgEdu) {
+    public dtoEducacion(String nombreEdu,String urlEdu, String descripcionEdu, String inicioEdu, String finEdu, String tituloEdu, String imgEdu) {
         this.nombreEdu = nombreEdu;
+        this.urlEdu = urlEdu;
         this.descripcionEdu = descripcionEdu;
         this.inicioEdu = inicioEdu;
         this.finEdu = finEdu;
@@ -73,6 +75,14 @@ public class dtoEducacion {
 
     public void setImgEdu(String imgEdu) {
         this.imgEdu = imgEdu;
+    }
+
+    public String getUrlEdu() {
+        return urlEdu;
+    }
+
+    public void setUrlEdu(String urlEdu) {
+        this.urlEdu = urlEdu;
     }
     
     

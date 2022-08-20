@@ -40,7 +40,7 @@ export class ExperienciaLaboralComponent implements OnInit {
           this.cargarExperiencia();
         },
         (err) => {
-          alert('No se pudoborrar la experiencia');
+          alert('No se pudo borrar la experiencia');
         }
       );
     }

@@ -15,6 +15,7 @@ public class Educacion implements Serializable {
     private int id;
     @NotNull
     private String nombreEdu;
+    private String urlEdu;
     @NotNull
     private String descripcionEdu;
     @NotNull
@@ -27,8 +28,9 @@ public class Educacion implements Serializable {
     public Educacion() {
     }
 
-    public Educacion(String nombreEdu, String descripcionEdu, String inicioEdu, String finEdu, String TituloEdu, String imgEdu) {
+    public Educacion(String nombreEdu, String urlEdu, String descripcionEdu, String inicioEdu, String finEdu, String TituloEdu, String imgEdu) {
         this.nombreEdu = nombreEdu;
+        this.urlEdu = urlEdu;
         this.descripcionEdu = descripcionEdu;
         this.inicioEdu = inicioEdu;
         this.finEdu = finEdu;
@@ -90,6 +92,14 @@ public class Educacion implements Serializable {
 
     public void setImgEdu(String imgEdu) {
         this.imgEdu = imgEdu;
+    }
+
+    public String getUrlEdu() {
+        return urlEdu;
+    }
+
+    public void setUrlEdu(String urlEdu) {
+        this.urlEdu = urlEdu;
     }
     
     
