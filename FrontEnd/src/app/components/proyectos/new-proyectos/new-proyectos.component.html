@@ -1,1 +1,60 @@
-<p>new-proyectos works!</p>
+<div class="container">
+    <div class="row">
+      <div>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombreP">NOMBRE DEL PROYECTO</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombreP"
+              name="nombreP"
+              placeholder="NOMBRE DE LA HABILIDAD"
+              [(ngModel)]="nombreP"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="descripcionP">DESCRIPCION DEL PROYECTO</label>
+            <input
+              type="text"
+              class="form-control"
+              id="descripcionP"
+              name="descripcionP"
+              placeholder="EN ESCALA DE 1 A 100, EJ. 70"
+              [(ngModel)]="descripcionP"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="imgP">PREVIEW PROYECTO</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imgP"
+              name="imgP"
+              placeholder="LOGO DEL LENGUAJE/FRAMEWORK"
+              [(ngModel)]="imgP"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="urlP">URL PROYECTO</label>
+            <input
+              type="text"
+              class="form-control"
+              id="urlP"
+              name="urlP"
+              placeholder="URL DEL PROYECTO"
+              [(ngModel)]="urlP"
+              required
+            />
+          </div>
+          <button class="btn btn-dark">AGREGAR PROYECTO</button>
+          <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
+        </form>
+      </div>
+    </div>
+  </div>

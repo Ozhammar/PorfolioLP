@@ -1,15 +1,45 @@
-<div class="container text-center" id="Proyectos">
-    <h1>Mis Proyectos</h1>
-    <div class="row justify-content-evenly">
-        <h3>
-            Porfolio Argentina Programa
-        </h3>
-        <div class="col-lg-4 text-center">
-          <p>Lorem ipsum dolor sit amet, consectetur adip</p>
-        </div>
-    
-        <div class="col-lg-4">
-          <img class="img-fluid" href="http" alt="Preview Proyecto">
+<div class="container" id="Proyectos">
+  <h1 class=" text-center">Mis Proyectos</h1>
+
+  <div class="text-left">
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/nuevoproyectos"
+      *ngIf="isLogged"
+    >
+      NUEVO PROYECTO
+    </button>
+  </div>
+
+  <div class="row" *ngFor="let Proyectos of proyecto">
+    <div class="col-lg-4 text-center">
+      <h3>
+        {{ Proyectos.nombreP }}
+      </h3>
+      <p>{{ Proyectos.descripcionP }}</p>
+
+      <div>
+        <div class="button" *ngIf="isLogged">
+          <button
+            class="btn btn-dark"
+            routerLink="/editproyectos/{{ Proyectos.id }}"
+          >
+            <i class="bi bi-pencil-fill"></i> EDITAR
+          </button>
+          <button class="btn btn-danger" (click)="delete(Proyectos.id)">
+            <i class="bi bi-trash-fill"></i> BORRAR
+          </button>
         </div>
       </div>
+    </div>
+    <div class="col-lg-8">
+      <a href="{{ Proyectos.urlP }}"
+        ><img
+          class="img-fluid"
+          src="{{ Proyectos.imgP }}"
+          alt="Preview {{ Proyectos.nombreP }}"
+      /></a>
+    </div>
+  </div>
 </div>
