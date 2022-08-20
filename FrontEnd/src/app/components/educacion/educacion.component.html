@@ -1,21 +1,21 @@
 <div class="container" id="Educación">
   <h1 class="text-center">Formacion Academica</h1>
 
-  <div>
-    <button
-      type="button"
-      class="btn btn-dark"
-      routerLink="/nuevaedu"
-      *ngIf="isLogged"
-    >
-      NUEVA EXPERIENCIA EDUCATIVA
-    </button>
-  </div>
+  <div class="row align-items-center" >
+    <div>
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/nuevaedu"
+        *ngIf="isLogged"
+      >
+        NUEVA EXPERIENCIA EDUCATIVA
+      </button>
+    </div>
 
 
   <div class="row align-items-center" *ngFor="let Educacion of edu">
     <div class="col-12 col-sm-3 col-md-4 col-lg-2 col-xl-2 text-center">
-      <!--http://colegioeccleston.org.ar/-->
       <a href="{{Educacion.urlEdu}}" target="_blank"
         ><img
           class="img-fluid"
@@ -40,6 +40,14 @@
           </li>
         </ul>
       </ul>
+    </div>
+    <div *ngIf="isLogged">
+      <button class="btn btn-dark" routerLink="/editedu/{{ Educacion.id }}">
+      <i class="bi bi-pencil-fill"></i> EDITAR
+    </button>
+      <button class="btn btn-danger" (click)="delete(Educacion.id)">
+        <i class="bi bi-trash-fill"></i> BORRAR
+      </button>
     </div>
   </div>
 

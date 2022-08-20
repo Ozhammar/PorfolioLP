@@ -1,1 +1,94 @@
-<p>edit-edu works!</p>
+<div class="container" *ngIf="edu">
+    <div class="row">
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombreEdu">NOMBRE DE LA INSTITUCION</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombreEdu"
+              name="nombreEdu"
+              placeholder="NOMBRE DE LA EMPRESA O INSTITUCION"
+              [(ngModel)]="edu.nombreEdu"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="urlEdu">SITIO WEB DE LA INSTITUCION</label>
+            <input
+              type="text"
+              class="form-control"
+              id="urlEdu"
+              name="urlEdu"
+              placeholder="SITIO WEB DE LA INSTITUCION"
+              [(ngModel)]="edu.urlEdu"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="descripcionEdu">DESCRIPCION DE LA INSTITUCION</label>
+            <input
+              type="text"
+              class="form-control"
+              id="descripcionEdu"
+              name="descripcionEdu"
+              placeholder="DESCRIPCION DE LA EXPERIENCIA"
+              [(ngModel)]="edu.descripcionEdu"
+              required
+            />
+          <div class="form-group">
+            <label for="inicioEdu">FECHA DE INICIO </label>
+            <input
+              type="date"
+              class="form-control"
+              id="inicioEdu"
+              name="inicioEdu"
+              placeholder="FECHA DE INCIO"
+              [(ngModel)]="edu.inicioEdu"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="finEdu">FECHA DE FINALIZACION </label>
+            <input
+              type="date"
+              class="form-control"
+              id="finEdu"
+              name="finEdu"
+              placeholder="FECHA DE FINALIZACION"
+              [(ngModel)]="edu.finEdu"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="tituloEdu">TITULO OBTENIDO </label>
+            <input
+              type="text"
+              class="form-control"
+              id="tituloEdu"
+              name="tituloEdu"
+              placeholder="PUESTO O CARGO EJERCIDO"
+              [(ngModel)]="edu.tituloEdu"
+              required
+            />
+          </div>
+          
+            <label for="imgEdu">LOGO INSTITUCIONAL </label>
+            <input
+              type="text"
+              class="form-control"
+              id="imgEdu"
+              name="imgEdu"
+              placeholder="INSERTAR LINK DE LA IMAGEN"
+              [(ngModel)]="edu.imgEdu"
+              required
+              
+            />
+          </div>
+          <button class="btn btn-dark">EDITAR EXPERIENCIA</button>
+          <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
+        </form>
+      </div>
+    </div>
+  </div>

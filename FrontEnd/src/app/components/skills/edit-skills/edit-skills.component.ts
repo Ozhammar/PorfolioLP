@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Educacion } from 'src/app/model/educacion';
-import { SEducacionService } from 'src/app/service/s-educacion.service';
+import { Skills } from 'src/app/model/skills';
+import { SSkillsService } from 'src/app/service/s-skills.service';
 
 @Component({
-  selector: 'app-edit-edu',
-  templateUrl: './edit-edu.component.html',
-  styleUrls: ['./edit-edu.component.css']
+  selector: 'app-edit-skills',
+  templateUrl: './edit-skills.component.html',
+  styleUrls: ['./edit-skills.component.css']
 })
-export class EditEduComponent implements OnInit {
-  edu: Educacion = null;
+export class EditSkillsComponent implements OnInit {
 
-  constructor(private sEducacion: SEducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  skill: Skills = null;
+
+  constructor(private sSkills: SSkillsService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sEducacion.detail(id).subscribe(
-      data => { this.edu = data;},
+    this.sSkills.detail(id).subscribe(
+      data => { this.skill = data;},
      err => {
         alert('Error en la modificacion');
         this.router.navigate(['']);
@@ -26,7 +27,7 @@ export class EditEduComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sEducacion.update(id, this.edu).subscribe(
+    this.sSkills.update(id, this.skill).subscribe(
       data => {this.router.navigate(['']);},
       err => {
         alert('Error en la modificacion');
@@ -38,5 +39,6 @@ export class EditEduComponent implements OnInit {
   stepBack(): void {
     this.router.navigate(['']);
   }
+
 
 }

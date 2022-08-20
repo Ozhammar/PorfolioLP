@@ -17,3 +17,13 @@ li {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.btn{
+  margin-right: 10px;
+  margin-top: 10px;
+  align-self: end;
+}
+
+.row{
+  padding-left: 25px;
+}
