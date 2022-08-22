@@ -17,6 +17,7 @@ export class ExperienciaLaboralComponent implements OnInit {
   ) {}
 
   isLogged = false;
+  isAdmin = false;
 
   ngOnInit(): void {
     this.cargarExperiencia();
@@ -25,6 +26,12 @@ export class ExperienciaLaboralComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    if(this.tokenService.isAdmin()){
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+    
   }
 
   cargarExperiencia(): void {

@@ -27,3 +27,7 @@ li {
 .row{
   padding-left: 25px;
 }
+
+h1{
+  box-shadow: rgba(255, 0, 0, 0.664) 10px 25px 20px -20px,rgba(255, 0, 0, 0.274) 10px -25px 10px -20px;
+}

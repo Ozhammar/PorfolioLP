@@ -26,6 +26,7 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos/new-
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos/edit-proyectos.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos/ed
   ],
 
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    
   ],
   bootstrap: [AppComponent]
 })

@@ -11,6 +11,7 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos/new-
 import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
 import { NewSkillsComponent } from './components/skills/new-skills/new-skills.component';
 
+
 const routes: Routes = [
   {path:'', component : HomeComponent},
   {path:'login', component: LoginComponent},

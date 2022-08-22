@@ -45,6 +45,14 @@ export class TokenService {
     return this.roles;
   }
 
+  public isAdmin(){
+    if (window.sessionStorage.getItem(USERNAME_KEY) === 'admin'){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public logOut(): void {
     window.sessionStorage.clear();
   }

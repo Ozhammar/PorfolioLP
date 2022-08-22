@@ -6,7 +6,7 @@
         type="button"
         class="btn btn-dark"
         routerLink="/nuevaexp"
-        *ngIf="isLogged"
+        *ngIf="isAdmin, isLogged"
       >
         NUEVA HABILIDAD
       </button>
@@ -30,7 +30,7 @@
           style="width: {{Skills.valueSk}}%"
         ></div>
       </div>
-     <div class="button" *ngIf="isLogged">
+     <div class="button" *ngIf="isAdmin, isLogged">
         <button class="btn btn-dark" routerLink="/editskill/{{ Skills.id }}">
           <i class="bi bi-pencil-fill"></i> EDITAR
         </button>

@@ -6,7 +6,7 @@
       type="button"
       class="btn btn-dark"
       routerLink="/nuevoproyectos"
-      *ngIf="isLogged"
+      *ngIf="isAdmin, isLogged"
     >
       NUEVO PROYECTO
     </button>
@@ -20,7 +20,7 @@
       <p>{{ Proyectos.descripcionP }}</p>
 
       <div>
-        <div class="button" *ngIf="isLogged">
+        <div class="button" *ngIf="isAdmin, isLogged">
           <button
             class="btn btn-dark"
             routerLink="/editproyectos/{{ Proyectos.id }}"

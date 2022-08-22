@@ -17,6 +17,7 @@ export class EducacionComponent implements OnInit {
   ) {}
 
   isLogged = false;
+  isAdmin = false;
 
   ngOnInit(): void {
     this.cargarEducacion();
@@ -24,6 +25,11 @@ export class EducacionComponent implements OnInit {
       this.isLogged = true;
     } else {
       this.isLogged = false;
+    }
+    if(this.tokenService.isAdmin()){
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
     }
   }
 
