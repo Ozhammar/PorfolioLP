@@ -33,7 +33,7 @@ export class AcercaDeComponent implements OnInit {
   }
 
   cargarPersona(): void {
-    this.personaService.lista().subscribe((data) => {
+    this.personaService.getPersona().subscribe((data) => {
       this.persona = data;
     });
   }

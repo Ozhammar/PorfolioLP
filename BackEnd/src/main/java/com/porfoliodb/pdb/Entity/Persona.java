@@ -1,6 +1,5 @@
 package com.porfoliodb.pdb.Entity;
 
-import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +9,7 @@ import javax.validation.constraints.Size;
 
 
 @Entity
-public class Persona implements Serializable {
+public class Persona{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +29,7 @@ public class Persona implements Serializable {
     @Size(min = 1, max = 3000, message = "No cumple con la longitud maxima o minima")
     private String descripcion;
 
-    @Size(min = 1, max = 50, message = "No cumple con la longitud maxima o minima")
+    
     private String img;
 
     public Persona() {

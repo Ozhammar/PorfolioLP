@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("personas")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class CPersona {
 
     @Autowired
@@ -52,17 +52,22 @@ public class CPersona {
         return new ResponseEntity(new Mensaje("Experiencia educativa actualizada con exito"), HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
-    @GetMapping("/detail")
-    public ResponseEntity<Persona> getById(int id) {
-        id = 1;
-        if (!sPersona.existsById(1)) {
+     @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Persona> getById(@PathVariable("id") int id) {
+        if (!sPersona.existsById(id)) {
             return new ResponseEntity(new Mensaje("no existe la experiencia educativa"), HttpStatus.NOT_FOUND);
         }
         Persona persona = sPersona.getOne(id).get();
         return new ResponseEntity(persona, HttpStatus.OK);
     }
 
+    @GetMapping("/traer/perfil")
+    public Persona findPersona(){
+        return sPersona.findPersona((int)1);
+    }
+    
+    
  
 
 }
