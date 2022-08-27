@@ -9,7 +9,7 @@ import { Educacion } from '../model/educacion';
 })
 export class SEducacionService {
 
-  eduURL = 'https://pofoliolp.herokuapp.com/edu/';
+  eduURL = 'http://localhost:8080/edu/';
 
   constructor(private httpClient: HttpClient) {}
 

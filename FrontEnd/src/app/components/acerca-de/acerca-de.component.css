@@ -12,7 +12,7 @@
 }
 
 .img-thumbnail{
-    box-shadow: 5px 5px 15px red;
+    box-shadow: 2px 2px 20px rgba(255, 0, 0, 0.181);
     background-color: black;
     border-color: black;
     margin-bottom: 20px;

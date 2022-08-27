@@ -8,7 +8,7 @@ import { Proyectos } from '../model/proyectos';
 })
 export class SProyectosService {
 
- pURL = 'https://pofoliolp.herokuapp.com/proyectos/';
+ pURL = 'http://localhost:8080/proyectos/';
 
   constructor(private httpClient: HttpClient) {}
 

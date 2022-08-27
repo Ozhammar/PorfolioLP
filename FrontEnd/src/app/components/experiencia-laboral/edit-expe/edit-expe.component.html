@@ -1,85 +1,81 @@
-<div class="container" *ngIf="expLab">
-    <div class="row">
-      <div>
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-       
-          <div class="form-group">
-            <label for="nombreExp">NOMBRE </label>
-            <input
-              type="text"
-              class="form-control"
-              id="nombreExp"
-              name="nombreExp"
-              placeholder="NOMBRE DE LA EMPRESA O INSTITUCION"
-              [(ngModel)]="expLab.nombreExp"
-              required
-            />
-          </div>
-  
-          <div class="form-group">
-            <label for="inicioExp">FECHA DE INICIO </label>
-            <input
-              type="date"
-              class="form-control"
-              id="inicioExp"
-              name="inicioExp"
-              placeholder="FECHA DE INCIO"
-              [(ngModel)]="expLab.inicioExp"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="finExp">FECHA DE FINALIZACION </label>
-            <input
-              type="date"
-              class="form-control"
-              id="finExp"
-              name="finExp"
-              placeholder="FECHA DE FINALIZACION"
-              [(ngModel)]="expLab.finExp"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="cargoExp">PUESTO/CARGO </label>
-            <input
-              type="text"
-              class="form-control"
-              id="cargoExp"
-              name="cargoExp"
-              placeholder="PUESTO O CARGO EJERCIDO"
-              [(ngModel)]="expLab.cargoExp"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="descripcionExp">DESCRIPCION </label>
-            <input
-              type="text"
-              class="form-control"
-              id="descripcionExp"
-              name="descripcionExp"
-              placeholder="DESCRIPCION DE LA EXPERIENCIA"
-              [(ngModel)]="expLab.descripcionExp"
-              required
-            />
-            <label for="imgExp">LOGO INSTITUCIONAL </label>
-            <input
-              type="text"
-              class="form-control"
-              id="imgExp"
-              name="imgExp"
-              placeholder="INSERTAR LINK DE LA IMAGEN"
-              [(ngModel)]="expLab.imgExp"
-              required
-              
-            />
-          </div>
-          <button class="btn btn-dark"> ACTUALIZAR EXPERIENCIA</button>
-          <button class="btn btn-danger" (click)="stepBack()">
-            REGRESAR
-          </button>
-        </form>
-      </div>
+<div class="container col-6" *ngIf="expLab">
+  <div class="row" id="edit-new-forms">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombreExp">NOMBRE </label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombreExp"
+            name="nombreExp"
+            placeholder="NOMBRE DE LA EMPRESA O INSTITUCION"
+            [(ngModel)]="expLab.nombreExp"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inicioExp">FECHA DE INICIO </label>
+          <input
+            type="date"
+            class="form-control"
+            id="inicioExp"
+            name="inicioExp"
+            placeholder="FECHA DE INCIO"
+            [(ngModel)]="expLab.inicioExp"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="finExp">FECHA DE FINALIZACION </label>
+          <input
+            type="date"
+            class="form-control"
+            id="finExp"
+            name="finExp"
+            placeholder="FECHA DE FINALIZACION"
+            [(ngModel)]="expLab.finExp"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cargoExp">PUESTO/CARGO </label>
+          <input
+            type="text"
+            class="form-control"
+            id="cargoExp"
+            name="cargoExp"
+            placeholder="PUESTO O CARGO EJERCIDO"
+            [(ngModel)]="expLab.cargoExp"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="descripcionExp">DESCRIPCION </label>
+          <input
+            type="text"
+            class="form-control"
+            id="descripcionExp"
+            name="descripcionExp"
+            placeholder="DESCRIPCION DE LA EXPERIENCIA"
+            [(ngModel)]="expLab.descripcionExp"
+            required
+          />
+          <label for="imgExp">LOGO INSTITUCIONAL </label>
+          <input
+            type="text"
+            class="form-control"
+            id="imgExp"
+            name="imgExp"
+            placeholder="INSERTAR LINK DE LA IMAGEN"
+            [(ngModel)]="expLab.imgExp"
+            required
+          />
+        </div>
+        <button class="btn btn-dark">ACTUALIZAR EXPERIENCIA</button>
+        <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
+      </form>
     </div>
   </div>
+</div>

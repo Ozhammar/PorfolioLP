@@ -1,5 +1,7 @@
-<div class="container" *ngIf="edu">
-    <div class="row">
+<div class="container col-6" *ngIf="edu">
+    <div class="row" id="edit-new-forms">
+
+
       <div>
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
           <div class="form-group">

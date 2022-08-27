@@ -1,47 +1,47 @@
-<div class="container" *ngIf="skill">
-    <div class="row">
-      <div>
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-          <div class="form-group">
-            <label for="nombreS">NOMBRE DE LA HABILIDAD</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nombreS"
-              name="nombreS"
-              placeholder="NOMBRE DE LA HABILIDAD"
-              [(ngModel)]="skill.nombreS"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="valueSk">VALOR DE APRENDIZAJE</label>
-            <input
-              type="text"
-              class="form-control"
-              id="valueSk"
-              name="valueSk"
-              placeholder="EN ESCALA DE 1 A 100, EJ. 70"
-              [(ngModel)]="skill.valueSk"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="imgS">PIC SKILL</label>
-            <input
-              type="text"
-              class="form-control"
-              id="imgS"
-              name="imgS"
-              placeholder="NOMBRE DE LA HABILIDAD"
-              [(ngModel)]="skill.imgS"
-              required
-            />
-          </div>
+<div class="container col-6" *ngIf="skill">
+  <div class="row" id="edit-new-forms">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombreS">NOMBRE DE LA HABILIDAD</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombreS"
+            name="nombreS"
+            placeholder="NOMBRE DE LA HABILIDAD"
+            [(ngModel)]="skill.nombreS"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="valueSk">VALOR DE APRENDIZAJE</label>
+          <input
+            type="text"
+            class="form-control"
+            id="valueSk"
+            name="valueSk"
+            placeholder="EN ESCALA DE 1 A 100, EJ. 70"
+            [(ngModel)]="skill.valueSk"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="imgS">PIC SKILL</label>
+          <input
+            type="text"
+            class="form-control"
+            id="imgS"
+            name="imgS"
+            placeholder="NOMBRE DE LA HABILIDAD"
+            [(ngModel)]="skill.imgS"
+            required
+          />
+        </div>
 
-          <button class="btn btn-dark">EDITAR HABILIDAD</button>
-          <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
-        </form>
-      </div>
+        <button class="btn btn-dark">EDITAR HABILIDAD</button>
+        <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
+      </form>
     </div>
   </div>
+</div>

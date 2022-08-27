@@ -8,7 +8,7 @@ import { Skills } from '../model/skills';
 })
 export class SSkillsService {
 
-  sURL = 'https://pofoliolp.herokuapp.com/skills/';
+  sURL = 'http://localhost:8080/skills/';
 
   constructor(private httpClient: HttpClient) {}
 
