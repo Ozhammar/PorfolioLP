@@ -3,56 +3,56 @@
       <div>
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
           <div class="form-group">
-            <label for="nombreP">NOMBRE DEL PROYECTO</label>
+            <label for="nombreP">Nombre del proyecto</label>
             <input
               type="text"
               class="form-control"
               id="nombreP"
               name="nombreP"
-              placeholder="NOMBRE DE LA HABILIDAD"
+              placeholder="Nombre del proyecto"
               [(ngModel)]="nombreP"
               required
             />
           </div>
   
           <div class="form-group">
-            <label for="descripcionP">DESCRIPCION DEL PROYECTO</label>
+            <label for="descripcionP">Descripción del proyecto</label>
             <input
               type="text"
               class="form-control"
               id="descripcionP"
               name="descripcionP"
-              placeholder="EN ESCALA DE 1 A 100, EJ. 70"
+              placeholder="Descripción del proyecto"
               [(ngModel)]="descripcionP"
               required
             />
           </div>
   
           <div class="form-group">
-            <label for="imgP">PREVIEW PROYECTO</label>
+            <label for="imgP">Preview el proyecto</label>
             <input
               type="text"
               class="form-control"
               id="imgP"
               name="imgP"
-              placeholder="LOGO DEL LENGUAJE/FRAMEWORK"
+              placeholder="Link a una imagen del proyecto"
               [(ngModel)]="imgP"
               required
             />
           </div>
           <div class="form-group">
-            <label for="urlP">URL PROYECTO</label>
+            <label for="urlP">Url del proyecto</label>
             <input
               type="text"
               class="form-control"
               id="urlP"
               name="urlP"
-              placeholder="URL DEL PROYECTO"
+              placeholder="Url del proyecto"
               [(ngModel)]="urlP"
               required
             />
           </div>
-          <button class="btn btn-dark">AGREGAR PROYECTO</button>
+          <button class="btn btn-dark">AGREGAR</button>
           <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
         </form>
       </div>

@@ -3,43 +3,43 @@
     <div>
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="nombreS">NOMBRE DE LA HABILIDAD</label>
+          <label for="nombreS">Nombre de la habilidad</label>
           <input
             type="text"
             class="form-control"
             id="nombreS"
             name="nombreS"
-            placeholder="NOMBRE DE LA HABILIDAD"
+            placeholder="Nombre de la habilidad"
             [(ngModel)]="skill.nombreS"
             required
           />
         </div>
         <div class="form-group">
-          <label for="valueSk">VALOR DE APRENDIZAJE</label>
+          <label for="valueSk">Valor de aprendizaje</label>
           <input
             type="text"
             class="form-control"
             id="valueSk"
             name="valueSk"
-            placeholder="EN ESCALA DE 1 A 100, EJ. 70"
+            placeholder="EN ESCALA DE 1 A 100, EJ. 70 = 70%"
             [(ngModel)]="skill.valueSk"
             required
           />
         </div>
         <div class="form-group">
-          <label for="imgS">PIC SKILL</label>
+          <label for="imgS">Imagen representativa</label>
           <input
             type="text"
             class="form-control"
             id="imgS"
             name="imgS"
-            placeholder="NOMBRE DE LA HABILIDAD"
+            placeholder="LINK AL LOGO DEL LENGUAJE/FRAMEWORK"
             [(ngModel)]="skill.imgS"
             required
           />
         </div>
 
-        <button class="btn btn-dark">EDITAR HABILIDAD</button>
+        <button class="btn btn-dark">EDITAR</button>
         <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
       </form>
     </div>

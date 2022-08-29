@@ -3,20 +3,20 @@
     <div>
       <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="nombreExp">NOMBRE </label>
+          <label for="nombreExp">Nombre de la institución o empresa</label>
           <input
             type="text"
             class="form-control"
             id="nombreExp"
             name="nombreExp"
-            placeholder="NOMBRE DE LA EMPRESA O INSTITUCION"
+            placeholder="Nombre del establecimiento"
             [(ngModel)]="nombreExp"
             required
           />
         </div>
 
         <div class="form-group">
-          <label for="inicioExp">FECHA DE INICIO </label>
+          <label for="inicioExp">Fecha de ingreso</label>
           <input
             type="date"
             class="form-control"
@@ -28,7 +28,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="finExp">FECHA DE FINALIZACION </label>
+          <label for="finExp">Fecha de egreso</label>
           <input
             type="date"
             class="form-control"
@@ -40,29 +40,29 @@
           />
         </div>
         <div class="form-group">
-          <label for="cargoExp">PUESTO/CARGO </label>
+          <label for="cargoExp">Puesto desempeñado</label>
           <input
             type="text"
             class="form-control"
             id="cargoExp"
             name="cargoExp"
-            placeholder="PUESTO O CARGO EJERCIDO"
+            placeholder="Puesto o cargo desempeñado"
             [(ngModel)]="cargoExp"
             required
           />
         </div>
         <div class="form-group">
-          <label for="descripcionExp">DESCRIPCION </label>
+          <label for="descripcionExp">Descripción de las actividades</label>
           <input
             type="text"
             class="form-control"
             id="descripcionExp"
             name="descripcionExp"
-            placeholder="DESCRIPCION DE LA EXPERIENCIA"
+            placeholder="Descripción de las actividades"
             [(ngModel)]="descripcionExp"
             required
           />
-          <label for="imgExp">LOGO INSTITUCIONAL </label>
+          <label for="imgExp">Emblema institutional</label>
           <input
             type="text"
             class="form-control"
@@ -74,7 +74,7 @@
             
           />
         </div>
-        <button class="btn btn-dark">AGREGAR EXPERIENCIA</button>
+        <button class="btn btn-dark">AGREGAR</button>
         <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
       </form>
     </div>

@@ -5,42 +5,42 @@
       <div>
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
           <div class="form-group">
-            <label for="nombreEdu">NOMBRE DE LA INSTITUCION</label>
+            <label for="nombreEdu">Nombre de la Institución</label>
             <input
               type="text"
               class="form-control"
               id="nombreEdu"
               name="nombreEdu"
-              placeholder="NOMBRE DE LA EMPRESA O INSTITUCION"
+              placeholder="Nombre del establecimiento"
               [(ngModel)]="edu.nombreEdu"
               required
             />
           </div>
           <div class="form-group">
-            <label for="urlEdu">SITIO WEB DE LA INSTITUCION</label>
+            <label for="urlEdu">Webpage de la Institución</label>
             <input
               type="text"
               class="form-control"
               id="urlEdu"
               name="urlEdu"
-              placeholder="SITIO WEB DE LA INSTITUCION"
+              placeholder="Link a la Webpage"
               [(ngModel)]="edu.urlEdu"
               required
             />
           </div>
           <div class="form-group">
-            <label for="descripcionEdu">DESCRIPCION DE LA INSTITUCION</label>
+            <label for="descripcionEdu">Descripción de la Institución</label>
             <input
               type="text"
               class="form-control"
               id="descripcionEdu"
               name="descripcionEdu"
-              placeholder="DESCRIPCION DE LA EXPERIENCIA"
+              placeholder="Información sobre la Institución"
               [(ngModel)]="edu.descripcionEdu"
               required
             />
           <div class="form-group">
-            <label for="inicioEdu">FECHA DE INICIO </label>
+            <label for="inicioEdu">Fecha de inicio de los estudios</label>
             <input
               type="date"
               class="form-control"
@@ -52,7 +52,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="finEdu">FECHA DE FINALIZACION </label>
+            <label for="finEdu">Fecha de finalización de los estudios</label>
             <input
               type="date"
               class="form-control"
@@ -64,19 +64,19 @@
             />
           </div>
           <div class="form-group">
-            <label for="tituloEdu">TITULO OBTENIDO </label>
+            <label for="tituloEdu">Título obtenido</label>
             <input
               type="text"
               class="form-control"
               id="tituloEdu"
               name="tituloEdu"
-              placeholder="PUESTO O CARGO EJERCIDO"
+              placeholder="Título o certificación obtenida"
               [(ngModel)]="edu.tituloEdu"
               required
             />
           </div>
           
-            <label for="imgEdu">LOGO INSTITUCIONAL </label>
+            <label for="imgEdu">Emblema Institucional</label>
             <input
               type="text"
               class="form-control"
@@ -88,7 +88,7 @@
               
             />
           </div>
-          <button class="btn btn-dark">EDITAR EXPERIENCIA</button>
+          <button class="btn btn-dark">ACTUALIZAR</button>
           <button class="btn btn-danger" (click)="stepBack()">REGRESAR</button>
         </form>
       </div>
