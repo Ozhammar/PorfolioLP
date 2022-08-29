@@ -1,4 +1,4 @@
-a,ul,li,h3{
+a,ul,li{
     color: white;
     text-align:justify;
 }
@@ -7,7 +7,5 @@ a,ul,li,h3{
     height: 100px;
 }
 
-.row{
-    padding-bottom: 30px;
-}
+
 

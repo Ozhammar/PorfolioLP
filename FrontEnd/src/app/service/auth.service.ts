@@ -9,7 +9,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root',
 })
 export class AuthService {
-  authURL = 'https://pofoliolp.herokuapp.com/auth/';
+ //authURL = 'http://localhost:8080/auth/';
+ authURL = 'https://pofoliolp.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) {}
 

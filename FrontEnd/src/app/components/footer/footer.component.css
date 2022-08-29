@@ -3,7 +3,12 @@ img{
 }
 
 p{
-    margin-bottom: 0px;
+    margin-bottom: -5px;
     padding-top: 15px;
     color:white;
+}
+
+div{
+    padding-bottom: 5px;
+    box-shadow:rgba(255, 17, 17, 0.656) 6px -25px 10px -20px;
 }
